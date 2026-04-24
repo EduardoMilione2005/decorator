@@ -24,7 +24,7 @@ public class Main {
         System.out.println("Descrição: " + comBacklight.descricao());
 
         sep("4. Controle com Macro");
-        ControleComMacro comMacro = new ControleComMacro(new ControleBasico());
+        ControleComMarco comMacro = new ControleComMarco(new ControleBasico());
         System.out.println(comMacro.gravarMacro("cinema", java.util.List.of("ligar", "canal 5", "volume 10")));
         System.out.println(comMacro.gravarMacro("esporte", java.util.List.of("ligar", "canal 13", "volume 40")));
         System.out.println(comMacro.listarMacros());
@@ -42,7 +42,7 @@ public class Main {
         sep("6. Composição: Voz + Backlight + Macro");
         ControleRemoto mega = new ControleComVoz(
                                 new ControleComBacklight(
-                                  new ControleComMacro(new ControleBasico()), 6));
+                                  new ControleComMarco(new ControleBasico()), 6));
         System.out.println(mega.ligar());
         System.out.println(mega.mudarCanal(9));
         System.out.println("Descrição: " + mega.descricao());

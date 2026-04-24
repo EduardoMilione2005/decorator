@@ -3,11 +3,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ControleComMacro extends ControleDecorator {
+public class ControleComMarco extends ControleDecorator {
 
     private final Map<String, List<String>> macros = new HashMap<>();
 
-    public ControleComMacro(ControleRemoto controle) {
+    public ControleComMarco(ControleRemoto controle) {
         super(controle);
     }
 
